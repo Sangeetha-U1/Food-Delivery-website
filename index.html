@@ -1,1190 +1,865 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>FoodMart - Free eCommerce Grocery Store HTML Website Template</title>
+
+<head>
+
+    <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="author" content="">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>Food Funday Restaurant - One page HTML Responsive</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/vendor.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
 
-  </head>
-  <body>
-<header>
-  <div class="container-fluid">
-    <div class="row py-3 border-bottom align-items-center">
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
 
-      <!-- SVG ICONS -->
-      <svg xmlns="http://www.w3.org/2000/svg"
-           xmlns:xlink="http://www.w3.org/1999/xlink"
-           style="display: none;">
-        <defs>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-          <symbol id="user" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M15.71 12.71a6 6 0 1 0-7.42 0a10 10 0 0 0-6.22 8.18a1 1 0 0 0 2 .22a8 8 0 0 1 15.9 0a1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1a10 10 0 0 0-6.25-8.19ZM12 12a4 4 0 1 1 4-4a4 4 0 0 1-4 4Z"/>
-          </symbol>
+</head>
 
-          <symbol id="search" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"/>
-          </symbol>
-
-          <symbol id="cart" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M8.5 19a1.5 1.5 0 1 0 1.5 1.5A1.5 1.5 0 0 0 8.5 19ZM19 16H7a1 1 0 0 1 0-2h8.49a3.01 3.01 0 0 0 2.89-2.18l1.58-5.55A1 1 0 0 0 19 5H6.74a3 3 0 0 0-2.82-2H3a1 1 0 0 0 0 2h.92a1 1 0 0 1 .96.73l1.64 5.74A3 3 0 0 0 7 18h12a1 1 0 0 0 0-2ZM16.5 19a1.5 1.5 0 1 0 1.5 1.5a1.5 1.5 0 0 0-1.5-1.5Z"/>
-          </symbol>
-
-        </defs>
-      </svg>
-
-      <!-- LOGO -->
-      <div class="col-sm-4 col-lg-3 text-center text-sm-start">
-        <div class="main-logo">
-          <a href="index.html">
-            <img src="images/logo.png" alt="logo" class="img-fluid" style="max-height:40px;">
-          </a>
-        </div>
-      </div>
-
-      <!-- SEARCH WITH FILTER -->
-      <div class="col-sm-6 col-lg-4 d-none d-lg-block">
-
-        <div class="search-bar row bg-light p-2 my-2 rounded-4 align-items-center">
-
-          <!-- FILTER -->
-          <div class="col-4">
-            <select class="form-select border-0 bg-transparent">
-              <option>All</option>
-              <option>Groceries</option>
-              <option>Drinks</option>
-              <option>Chocolates</option>
-            </select>
-          </div>
-
-          <!-- INPUT -->
-          <div class="col-6">
-            <input type="text" class="form-control border-0 bg-transparent"
-              placeholder="Search products..." />
-          </div>
-
-          <!-- SEARCH ICON -->
-          <div class="col-2 text-end">
-            <svg width="22" height="22">
-              <use xlink:href="#search"></use>
-            </svg>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- MIDDLE MENU -->
-      <div class="col-lg-2 d-none d-lg-flex justify-content-center gap-3 align-items-center">
-
-        <a href="index.html" class="text-dark text-decoration-none fw-semibold">Home</a>
-        <a href="#products" class="text-dark text-decoration-none fw-semibold">Products</a>
-
-        <a href="#" class="text-dark text-decoration-none fw-semibold"
-           data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
-          Cart
-        </a>
-
-      </div>
-
-      <!-- RIGHT SIDE (USER + CART LAST) -->
-      <div class="col-sm-8 col-lg-3 d-flex justify-content-end gap-4 align-items-center">
-
-        <ul class="d-flex list-unstyled m-0 gap-2 align-items-center">
-
-          <!-- USER ICON FIXED -->
-          <li>
-            <a href="#" class="rounded-circle bg-light p-2 d-flex align-items-center justify-content-center">
-              <svg width="22" height="22">
-                <use href="#user"></use>
-              </svg>
-            </a>
-          </li>
-
-          <!-- CART ICON -->
-          <li>
-            <a href="#" class="rounded-circle bg-light p-2 d-flex align-items-center justify-content-center"
-               data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
-              <svg width="22" height="22">
-                <use href="#cart"></use>
-              </svg>
-            </a>
-          </li>
-
-        </ul>
-
-        <!-- CART SUMMARY (LAST ITEM LIKE BEFORE) -->
-        <div class="cart text-end d-none d-lg-block dropdown">
-          <button class="border-0 bg-transparent d-flex flex-column gap-1 lh-1"
-            type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
-
-            <span class="fs-6 text-muted">Your Cart</span>
-            <span class="cart-total fs-5 fw-bold">$1290.00</span>
-
-          </button>
-        </div>
-
-      </div>
-
+<body>
+    <div id="loader">
+        <div id="status"></div>
     </div>
-  </div>
-</header>    
-    <section class="py-3" style="background-image: url('images/background-pattern.jpg');background-repeat: no-repeat;background-size: cover;">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-
-            <div class="banner-blocks">
-            
-              <div class="banner-ad large bg-info block-1">
-
-                <div class="swiper main-swiper">
-                  <div class="swiper-wrapper">
-                    
-                    <div class="swiper-slide">
-                      <div class="row banner-content p-5">
-                        <div class="content-wrapper col-md-7">
-                          <div class="categories my-3">100% natural</div>
-                          <h3 class="display-4">Fresh Smoothie & Summer Juice</h3>
-                          <p> Refresh your day with delicious handcrafted smoothies and tropical summer juices made from fresh fruits, natural ingredients, and no artificial flavors.</p> <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Shop Now</a>
-                        </div>
-                        <div class="img-wrapper col-md-5">
-                          <img src="images/product-thumb-1.png" class="img-fluid">
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                      <div class="row banner-content p-5">
-                        <div class="content-wrapper col-md-7">
-                          <div class="categories mb-3 pb-3">100% natural</div>
-                          <h3 class="banner-title">Fresh Smoothie & Summer Juice</h3>
-                         <p>
-  Made fresh daily with seasonal fruits to deliver a healthy and naturally refreshing experience.
-</p>
-                          <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Shop Collection</a>
-                        </div>
-                        <div class="img-wrapper col-md-5">
-                          <img src="images/product-thumb-1.png" class="img-fluid">
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                      <div class="row banner-content p-5">
-                        <div class="content-wrapper col-md-7">
-                          <div class="categories mb-3 pb-3">100% natural</div>
-                          <h3 class="banner-title">Heinz Tomato Ketchup</h3>
-                            <p>
-  Enjoy every sip packed with freshness, energy, and the perfect taste to keep you cool all summer long.
-</p>
-                          <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Shop Collection</a>
-                        </div>
-                        <div class="img-wrapper col-md-5">
-                          <img src="images/product-thumb-2.png" class="img-fluid">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="swiper-pagination"></div>
-
-                </div>
-              </div>
-              
-              <div class="banner-ad bg-success-subtle block-2" style="background:url('images/ad-image-1.png') no-repeat;background-position: right bottom">
-                <div class="row banner-content p-5">
-
-                  <div class="content-wrapper col-md-7">
-                    <div class="categories sale mb-3 pb-3">20% off</div>
-                    <h3 class="banner-title">Fruits & Vegetables</h3>
-                    <a href="#" class="d-flex align-items-center nav-link">Shop Collection <svg width="24" height="24"><use xlink:href="#arrow-right"></use></svg></a>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="banner-ad bg-danger block-3" style="background:url('images/ad-image-2.png') no-repeat;background-position: right bottom">
-                <div class="row banner-content p-5">
-
-                  <div class="content-wrapper col-md-7">
-                    <div class="categories sale mb-3 pb-3">15% off</div>
-                    <h3 class="item-title">Baked Products</h3>
-                    <a href="#" class="d-flex align-items-center nav-link">Shop Collection <svg width="24" height="24"><use xlink:href="#arrow-right"></use></svg></a>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-            <!-- / Banner Blocks -->
-              
-          </div>
-        </div>
-      </div>
-    </section>
-
-<section class="py-5 overflow-hidden">
-  <div class="container-fluid">
-
-    <div class="row">
-      <div class="col-md-12">
-
-        <div class="section-header d-flex flex-wrap justify-content-between mb-5">
-          <div>
-            <h2 class="section-title">Popular Categories</h2>
-            <p class="text-muted">
-              Discover healthy foods, refreshing drinks, and fresh grocery essentials for your daily lifestyle.
-            </p>
-          </div>
-
-          <div class="d-flex align-items-center">
-            <a href="#" class="btn-link text-decoration-none">View All Categories →</a>
-
-            <div class="swiper-buttons">
-              <button class="swiper-prev category-carousel-prev btn btn-yellow">❮</button>
-              <button class="swiper-next category-carousel-next btn btn-yellow">❯</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-
-        <div class="category-carousel swiper">
-          <div class="swiper-wrapper">
-
-            <!-- Category Item -->
-            <a href="#" class="nav-link category-item swiper-slide">
-              <div class="card border-0 shadow-sm text-center p-3 h-100">
-
-                <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=600"
-                  class="img-fluid mb-3 category-img" alt="Fresh Fruits">
-
-                <h3 class="category-title fs-5">Fresh Fruits</h3>
-
-                <p class="text-muted small mb-0">
-                  Handpicked seasonal fruits packed with natural vitamins and freshness.
-                </p>
-
-              </div>
-            </a>
-
-            <!-- Category Item -->
-            <a href="#" class="nav-link category-item swiper-slide">
-              <div class="card border-0 shadow-sm text-center p-3 h-100">
-
-                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=600"
-                  class="img-fluid mb-3 category-img" alt="Vegetables">
-
-                <h3 class="category-title fs-5">Organic Vegetables</h3>
-
-                <p class="text-muted small mb-0">
-                  Naturally grown vegetables for healthy meals and balanced nutrition.
-                </p>
-
-              </div>
-            </a>
-
-            <!-- Category Item -->
-            <a href="#" class="nav-link category-item swiper-slide">
-              <div class="card border-0 shadow-sm text-center p-3 h-100">
-
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600"
-                  class="img-fluid mb-3 category-img" alt="Bakery">
-
-                <h3 class="category-title fs-5">Bakery & Breads</h3>
-
-                <p class="text-muted small mb-0">
-                  Freshly baked breads, cakes, and sweet delights prepared every day.
-                </p>
-
-              </div>
-            </a>
-
-            <!-- Category Item -->
-            <a href="#" class="nav-link category-item swiper-slide">
-              <div class="card border-0 shadow-sm text-center p-3 h-100">
-
-                <img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?q=80&w=600"
-                  class="img-fluid mb-3 category-img" alt="Juices">
-
-                <h3 class="category-title fs-5">Fresh Juices</h3>
-
-                <p class="text-muted small mb-0">
-                  Cool and refreshing fruit juices made with fresh natural ingredients.
-                </p>
-
-              </div>
-            </a>
-
-            <!-- Category Item -->
-            <a href="#" class="nav-link category-item swiper-slide">
-              <div class="card border-0 shadow-sm text-center p-3 h-100">
-
-                <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=600"
-                  class="img-fluid mb-3 category-img" alt="Dairy">
-
-                <h3 class="category-title fs-5">Dairy Products</h3>
-
-                <p class="text-muted small mb-0">
-                  Pure milk, cheese, butter, and yogurt from trusted dairy farms.
-                </p>
-
-              </div>
-            </a>
-
-            <!-- Category Item -->
-<a href="#" class="nav-link category-item swiper-slide">
-  <div class="card border-0 shadow-sm text-center p-3 h-100">
-
-    <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?q=80&w=600"
-      class="img-fluid mb-3 category-img" alt="Sea Food">
-
-    <h3 class="category-title fs-5">Sea Food</h3>
-
-    <p class="text-muted small mb-0">
-      Premium quality seafood freshly sourced for delicious and healthy meals.
-    </p>
-
-  </div>
-</a>
-
-<!-- Category Item -->
-<a href="#" class="nav-link category-item swiper-slide">
-  <div class="card border-0 shadow-sm text-center p-3 h-100">
-
-    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
-      class="img-fluid mb-3 category-img" alt="Cold Beverages">
-
-    <h3 class="category-title fs-5">Cold Beverages</h3>
-
-    <p class="text-muted small mb-0">
-      Refreshing cold drinks and energy beverages perfect for every season.
-    </p>
-
-  </div>
-</a>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-     <!--NEWLY ARRIVED-->
-<section class="py-5 overflow-hidden">
-  <div class="container-fluid">
-
-    <div class="row">
-      <div class="col-md-12">
-
-        <div class="section-header d-flex flex-wrap justify-content-between mb-5">
-
-          <div>
-            <h2 class="section-title">Newly Arrived Brands</h2>
-            <p class="text-muted">
-              Explore our latest healthy products, organic collections, and refreshing new arrivals.
-            </p>
-          </div>
-
-          <div class="d-flex align-items-center">
-            <a href="#" class="btn-link text-decoration-none">
-              View All Brands →
-            </a>
-
-            <div class="swiper-buttons">
-              <button class="swiper-prev brand-carousel-prev btn btn-yellow">❮</button>
-              <button class="swiper-next brand-carousel-next btn btn-yellow">❯</button>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-
-        <div class="brand-carousel swiper">
-          <div class="swiper-wrapper">
-
-            <!-- Product -->
-            <div class="swiper-slide">
-              <div class="card border-0 shadow-sm overflow-hidden h-100">
-
-                <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=800"
-                  class="brand-img" alt="Organic Honey">
-
-                <div class="card-body">
-                  <p class="text-muted mb-1">Nature Bliss</p>
-
-                  <h5 class="card-title">
-                    Organic Wild Honey
-                  </h5>
-
-                  <p class="small text-muted mb-0">
-                    Pure forest honey collected naturally with rich taste and healthy goodness.
-                  </p>
-                </div>
-
-              </div>
+    <div id="site-header">
+        <header id="header" class="header-block-top">
+            <div class="container">
+                <div class="row">
+                    <div class="main-menu">
+                        <!-- navbar -->
+                        <nav class="navbar navbar-default" id="mainNav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="logo">
+                                    <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                        <img src="images/logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="#banner">Home</a></li>
+                                    <li><a href="#about">About us</a></li>
+                                    <li><a href="#menu">Menu</a></li>
+                                    <li><a href="#">Restaurant</a></li>
+                                    <li><a href="#reservation">Reservaion</a></li>
+                                      <!-- Cart Option -->
+            <li>
+                <a href="#" data-toggle="modal" data-target="#cartModal">
+                    🛒 Cart
+                </a>
+            </li>
+                                                           <!-- end nav-collapse -->
+                        
+                        <!-- end navbar -->
+                         <!-- Cart / Checkout Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title">Checkout</h4>
             </div>
 
-            <!-- Product -->
-            <div class="swiper-slide">
-              <div class="card border-0 shadow-sm overflow-hidden h-100">
+            <div class="modal-body">
 
-                <img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?q=80&w=800"
-                  class="brand-img" alt="Fresh Juice">
+                <h4>Your Order</h4>
+                <p>Pizza x1 - ₹250</p>
+                <p>Burger x2 - ₹300</p>
+                <hr>
 
-                <div class="card-body">
-                  <p class="text-muted mb-1">Fresh Splash</p>
-
-                  <h5 class="card-title">
-                    Tropical Fruit Juice
-                  </h5>
-
-                  <p class="small text-muted mb-0">
-                    Refreshing tropical juice packed with fruity flavor and natural freshness.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Product -->
-            <div class="swiper-slide">
-              <div class="card border-0 shadow-sm overflow-hidden h-100">
-
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800"
-                  class="brand-img" alt="Bakery Bread">
-
-                <div class="card-body">
-                  <p class="text-muted mb-1">Bake House</p>
-
-                  <h5 class="card-title">
-                    Fresh Bakery Bread
-                  </h5>
-
-                  <p class="small text-muted mb-0">
-                    Soft freshly baked breads prepared daily with premium ingredients.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Product -->
-            <div class="swiper-slide">
-              <div class="card border-0 shadow-sm overflow-hidden h-100">
-
-                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800"
-                  class="brand-img" alt="Vegetables">
-
-                <div class="card-body">
-                  <p class="text-muted mb-1">Green Farm</p>
-
-                  <h5 class="card-title">
-                    Organic Vegetables
-                  </h5>
-
-                  <p class="small text-muted mb-0">
-                    Farm fresh organic vegetables full of nutrients and natural taste.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Product -->
-            <div class="swiper-slide">
-              <div class="card border-0 shadow-sm overflow-hidden h-100">
-
-                <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=800"
-                  class="brand-img" alt="Dairy Products">
-
-                <div class="card-body">
-                  <p class="text-muted mb-1">Daily Pure</p>
-
-                  <h5 class="card-title">
-                    Fresh Dairy Products
-                  </h5>
-
-                  <p class="small text-muted mb-0">
-                    Premium milk, cheese, butter, and yogurt sourced from trusted farms.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Product -->
-            <div class="swiper-slide">
-              <div class="card border-0 shadow-sm overflow-hidden h-100">
-
-                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800"
-                  class="brand-img" alt="Cold Drinks">
-
-                <div class="card-body">
-                  <p class="text-muted mb-1">Cool Berry</p>
-
-                  <h5 class="card-title">
-                    Summer Cold Drinks
-                  </h5>
-
-                  <p class="small text-muted mb-0">
-                    Chilled beverages and refreshing drinks perfect for hot summer days.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!--POPULAR PRODUCTS-->
-<section class="py-5">
-  <div class="container-fluid">
-
-    <div class="bootstrap-tabs product-tabs">
-
-      <!-- HEADER -->
-      <div class="tabs-header d-flex justify-content-between border-bottom my-5">
-        <h3>Trending Products</h3>
-
-        <nav>
-          <div class="nav nav-tabs" role="tablist">
-            <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#all">All</a>
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#fruits">Fruits & Veges</a>
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#juices">Juices</a>
-          </div>
-        </nav>
-
-      </div>
-
-      <div class="tab-content">
-
-        <!-- ================= ALL ================= -->
-        <div class="tab-pane fade show active" id="all">
-
-          <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-
-            <!-- FRUITS -->
-            <div class="col"><div class="product-item">
-              <img src="images/photo-1567306226416-28f0efdc88ce.avif" class="tab-image">
-              <h3>Apple</h3><span>₹120</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/photo-3.avif" class="tab-image">
-              <h3>pineapple</h3><span>₹60</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/orange.jpg" class="tab-image">
-              <h3>Orange</h3><span>₹90</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/photo-4.avif" class="tab-image">
-              <h3>Mango</h3><span>₹150</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/photo-2.avif" class="tab-image">
-              <h3>Grapes</h3><span>₹110</span>
-            </div></div>
-
-            <!-- VEGETABLES -->
-            <div class="col"><div class="product-item">
-              <img src="images/tamato.jpg" class="tab-image">
-              <h3>Tomato</h3><span>₹35</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/carrot.jpg" class="tab-image">
-              <h3>Carrot</h3><span>₹40</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/potato.jpg" class="tab-image">
-              <h3>Potato</h3><span>₹30</span>
-            </div></div>
-
-            <!-- JUICES -->
-            <div class="col"><div class="product-item">
-              <img src="images/photo-6.avif" class="tab-image">
-              <h3>Orange Juice</h3><span>₹80</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/mango-juice.jpg" class="tab-image">
-              <h3>Mango Juice</h3><span>₹95</span>
-            </div></div>
-
-          </div>
-        </div>
-
-        <!-- ================= FRUITS & VEGES ================= -->
-        <div class="tab-pane fade" id="fruits">
-
-          <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-
-            <div class="col"><div class="product-item">
-              <img src="images/photo-1567306226416-28f0efdc88ce.avif" class="tab-image">
-              <h3>Apple</h3><span>₹120</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/banana.jpg" class="tab-image">
-              <h3>Banana</h3><span>₹60</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/photo-4.avif" class="tab-image">
-              <h3>Mango</h3><span>₹150</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/orange.jpg" class="tab-image">
-              <h3>Orange</h3><span>₹90</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/photo-2.avif" class="tab-image">
-              <h3>Grapes</h3><span>₹110</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/tamato.jpg" class="tab-image">
-              <h3>Tomato</h3><span>₹35</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/carrot.jpg" class="tab-image">
-              <h3>Carrot</h3><span>₹40</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/onion.jpg" class="tab-image">
-              <h3>Onion</h3><span>₹25</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/spinach.jpg" class="tab-image">
-              <h3>Spinach</h3><span>₹20</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/cucumber.jpg" class="tab-image">
-              <h3>Cucumber</h3><span>₹30</span>
-            </div></div>
-
-          </div>
-        </div>
-
-        <!-- ================= JUICES ================= -->
-        <div class="tab-pane fade" id="juices">
-
-          <div class="product-grid row  row-cols-md-3 ">
-
-            <div class="col"><div class="product-item">
-              <img src="images/photo-6.avif" class="tab-image">
-              <h3>Orange Juice</h3><span>₹80</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/apple juice.jpg" class="tab-image">
-              <h3>Apple Juice</h3><span>₹85</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/mango-juice.jpg" class="tab-image">
-              <h3>Mango Juice</h3><span>₹95</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/pineapple juice.jpg" class="tab-image">
-              <h3>Pineapple Juice</h3><span>₹90</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/watermelon juice.jpg" class="tab-image">
-              <h3>Watermelon Juice</h3><span>₹70</span>
-            </div></div>
-
-            <div class="col"><div class="product-item">
-              <img src="images/grape juice.jpg" class="tab-image">
-              <h3>Grape Juice</h3><span>₹100</span>
-            </div></div>
-
-           
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-<section class="py-5">
-      <div class="container-fluid">
-        <div class="row">
-          
-          <div class="col-md-6">
-            <div class="banner-ad bg-danger mb-3" style="background: url('images/ad-image-3.png');background-repeat: no-repeat;background-position: right bottom;">
-              <div class="banner-content p-5">
-
-                <div class="categories text-primary fs-3 fw-bold">Upto 25% Off</div>
-                <h3 class="banner-title">Luxa Dark Chocolate</h3>
-                <p>Very tasty & creamy vanilla flavour creamy muffins.</p>
-                <a href="#" class="btn btn-dark text-uppercase">Show Now</a>
-
-              </div>
-            
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="banner-ad bg-info" style="background: url('images/ad-image-4.png');background-repeat: no-repeat;background-position: right bottom;">
-              <div class="banner-content p-5">
-
-                <div class="categories text-primary fs-3 fw-bold">Upto 25% Off</div>
-                <h3 class="banner-title">Creamy Muffins</h3>
-                <p>Very tasty & creamy vanilla flavour creamy muffins.</p>
-                <a href="#" class="btn btn-dark text-uppercase">Show Now</a>
-
-              </div>
-            
-            </div>
-          </div>
-             
-        </div>
-      </div>
-    </section>
-
-    <section class="py-5">
-      <div class="container-fluid">
-
-        <div class="bg-secondary py-5 my-5 rounded-5" style="background: url('images/bg-leaves-img-pattern.png') no-repeat;">
-          <div class="container my-5">
-            <div class="row">
-              <div class="col-md-6 p-5">
-                <div class="section-header">
-                  <h2 class="section-title display-4">Get <span class="text-primary">25% Discount</span> on your first purchase</h2>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst amet, metus, sit massa posuere maecenas. At tellus ut nunc amet vel egestas.</p>
-              </div>
-              <div class="col-md-6 p-5">
-                <form>
-                  <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text"
-                      class="form-control form-control-lg" name="name" id="name" placeholder="Name">
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label">Email</label>
-                    <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="abc@mail.com">
-                  </div>
-                  <div class="form-check form-check-inline mb-3">
-                    <label class="form-check-label" for="subscribe">
-                    <input class="form-check-input" type="checkbox" id="subscribe" value="subscribe">
-                    Subscribe to the newsletter</label>
-                  </div>
-                  <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-dark btn-lg">Submit</button>
-                  </div>
-                </form>
                 
-              </div>
-              
+<h4 class="total-price">Total: ₹550</h4>
+                <br>
+
+                <input type="text" class="form-control" placeholder="Enter Address">
+                <br>
+
+                <input type="text" class="form-control" placeholder="Phone Number">
+                <br>
+
+                <select class="form-control">
+                    <option>Cash on Delivery</option>
+                    <option>UPI</option>
+                    <option>Card Payment</option>
+                </select>
+
             </div>
-            
-          </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">
+                    Place Order
+                </button>
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+
         </div>
-        
-      </div>
-    </section>
-
-    <section id="latest-blog" class="py-5">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="section-header d-flex align-items-center justify-content-between my-5">
-            <h2 class="section-title">Our Recent Blog</h2>
-            <div class="btn-wrap align-right">
-              <a href="#" class="d-flex align-items-center nav-link">Read All Articles <svg width="24" height="24"><use xlink:href="#arrow-right"></use></svg></a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <article class="post-item card border-0 shadow-sm p-3">
-              <div class="image-holder zoom-effect">
-                <a href="#">
-                  <img src="images/post-thumb-1.jpg" alt="post" class="card-img-top">
-                </a>
-              </div>
-              <div class="card-body">
-                <div class="post-meta d-flex text-uppercase gap-3 my-2 align-items-center">
-                  <div class="meta-date"><svg width="16" height="16"><use xlink:href="#calendar"></use></svg>22 Aug 2021</div>
-                  <div class="meta-categories"><svg width="16" height="16"><use xlink:href="#category"></use></svg>tips & tricks</div>
-                </div>
-                <div class="post-header">
-                  <h3 class="post-title">
-                    <a href="#" class="text-decoration-none">Fresh Ideas & Food Inspiration</a>
-                  </h3>
-                  <p>Healthy and delicious homemade food ideas for everyday meals</p></div>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-4">
-            <article class="post-item card border-0 shadow-sm p-3">
-              <div class="image-holder zoom-effect">
-                <a href="#">
-                  <img src="images/post-thumb-2.jpg" alt="post" class="card-img-top">
-                </a>
-              </div>
-              <div class="card-body">
-                <div class="post-meta d-flex text-uppercase gap-3 my-2 align-items-center">
-                  <div class="meta-date"><svg width="16" height="16"><use xlink:href="#calendar"></use></svg>25 Aug 2021</div>
-                  <div class="meta-categories"><svg width="16" height="16"><use xlink:href="#category"></use></svg>trending</div>
-                </div>
-                <div class="post-header">
-                  <h3 class="post-title">
-                    <a href="#" class="text-decoration-none">Insights, Recipes & Trends</a>
-                  </h3>
-                  <p>Explore  tasty food ideas that you can prepare at home using fresh ingredients. </p></div>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-4">
-            <article class="post-item card border-0 shadow-sm p-3">
-              <div class="image-holder zoom-effect">
-                <a href="#">
-                  <img src="images/post-thumb-3.jpg" alt="post" class="card-img-top">
-                </a>
-              </div>
-              <div class="card-body">
-                <div class="post-meta d-flex text-uppercase gap-3 my-2 align-items-center">
-                  <div class="meta-date"><svg width="16" height="16"><use xlink:href="#calendar"></use></svg>28 Aug 2021</div>
-                  <div class="meta-categories"><svg width="16" height="16"><use xlink:href="#category"></use></svg>inspiration</div>
-                </div>
-                <div class="post-header">
-                  <h3 class="post-title">
-                    <a href="#" class="text-decoration-none">Healthy Recipes & Food Stories</a>
-                  </h3>
-                  <p>Enjoy simple and delicious homemade food ideas.</p></div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-5 my-5">
-      <div class="container-fluid">
-
-        <div class="bg-warning py-5 rounded-5" style="background-image: url('images/bg-pattern-2.png') no-repeat;">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <img src="images/phone.png" alt="phone" class="image-float img-fluid">
-              </div>
-              <div class="col-md-8">
-                <h2 class="my-5">Shop faster with foodmart App</h2>
-                <p>Discover fresh and healthy food delivered right to your doorstep with Foodmart. From farm-fresh fruits and vegetables to refreshing juices and daily essentials, everything is carefully selected to ensure quality and taste. Enjoy quick delivery,
-                   affordable prices, and a smooth shopping experience that makes healthy eating easier every day.</p>
-                <div class="d-flex gap-2 flex-wrap">
-                  <img src="images/app-store.jpg" alt="app-store">
-                  <img src="images/google-play.jpg" alt="google-play">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </section>
-
-    <section class="py-5">
-      <div class="container-fluid">
-        <h2 class="my-5">People are also looking for</h2>
-        <a href="#" class="btn btn-warning me-2 mb-2">Blue diamon almonds</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Angie’s Boomchickapop Corn</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Salty kettle Corn</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chobani Greek Yogurt</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Sweet Vanilla Yogurt</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Foster Farms Takeout Crispy wings</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Warrior Blend Organic</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chao Cheese Creamy</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chicken meatballs</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Blue diamon almonds</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Angie’s Boomchickapop Corn</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Salty kettle Corn</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chobani Greek Yogurt</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Sweet Vanilla Yogurt</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Foster Farms Takeout Crispy wings</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Warrior Blend Organic</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chao Cheese Creamy</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chicken meatballs</a>
-      </div>
-    </section>
-
-    <section class="py-5">
-      <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-5">
-          <div class="col">
-            <div class="card mb-3 border-0">
-              <div class="row">
-                <div class="col-md-2 text-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 15a3 3 0 0 0-1.9-2.78l1.87-7a1 1 0 0 0-.18-.87A1 1 0 0 0 20.5 4H6.8l-.33-1.26A1 1 0 0 0 5.5 2h-2v2h1.23l2.48 9.26a1 1 0 0 0 1 .74H18.5a1 1 0 0 1 0 2h-13a1 1 0 0 0 0 2h1.18a3 3 0 1 0 5.64 0h2.36a3 3 0 1 0 5.82 1a2.94 2.94 0 0 0-.4-1.47A3 3 0 0 0 21.5 15Zm-3.91-3H9L7.34 6H19.2ZM9.5 20a1 1 0 1 1 1-1a1 1 0 0 1-1 1Zm8 0a1 1 0 1 1 1-1a1 1 0 0 1-1 1Z"/></svg>
-                </div>
-                <div class="col-md-10">
-                  <div class="card-body p-0">
-                    <h5>Free delivery</h5>
-               <p class="card-text">Get fresh fruits, vegetables, and juices delivered quickly to your doorstep.</p>
-
-                  </div>
-                </div>
-              </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card mb-3 border-0">
-              <div class="row">
-                <div class="col-md-2 text-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19.63 3.65a1 1 0 0 0-.84-.2a8 8 0 0 1-6.22-1.27a1 1 0 0 0-1.14 0a8 8 0 0 1-6.22 1.27a1 1 0 0 0-.84.2a1 1 0 0 0-.37.78v7.45a9 9 0 0 0 3.77 7.33l3.65 2.6a1 1 0 0 0 1.16 0l3.65-2.6A9 9 0 0 0 20 11.88V4.43a1 1 0 0 0-.37-.78ZM18 11.88a7 7 0 0 1-2.93 5.7L12 19.77l-3.07-2.19A7 7 0 0 1 6 11.88v-6.3a10 10 0 0 0 6-1.39a10 10 0 0 0 6 1.39Zm-4.46-2.29l-2.69 2.7l-.89-.9a1 1 0 0 0-1.42 1.42l1.6 1.6a1 1 0 0 0 1.42 0L15 11a1 1 0 0 0-1.42-1.42Z"/></svg>
-                </div>
-                <div class="col-md-10">
-                  <div class="card-body p-0">
-                    <h5>100% secure payment</h5>
-                 <p class="card-text">Safe and secure checkout for all your fresh grocery purchases online.</p>
-                   
-                  </div>
-                </div>
-              </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card mb-3 border-0">
-              <div class="row">
-                <div class="col-md-2 text-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M22 5H2a1 1 0 0 0-1 1v4a3 3 0 0 0 2 2.82V22a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-9.18A3 3 0 0 0 23 10V6a1 1 0 0 0-1-1Zm-7 2h2v3a1 1 0 0 1-2 0Zm-4 0h2v3a1 1 0 0 1-2 0ZM7 7h2v3a1 1 0 0 1-2 0Zm-3 4a1 1 0 0 1-1-1V7h2v3a1 1 0 0 1-1 1Zm10 10h-4v-2a2 2 0 0 1 4 0Zm5 0h-3v-2a4 4 0 0 0-8 0v2H5v-8.18a3.17 3.17 0 0 0 1-.6a3 3 0 0 0 4 0a3 3 0 0 0 4 0a3 3 0 0 0 4 0a3.17 3.17 0 0 0 1 .6Zm2-11a1 1 0 0 1-2 0V7h2ZM4.3 3H20a1 1 0 0 0 0-2H4.3a1 1 0 0 0 0 2Z"/></svg>
-                </div>
-                <div class="col-md-10">
-                  <div class="card-body p-0">
-                    <h5>Quality guarantee</h5>
-
-                <p class="card-text">We ensure farm-fresh quality fruits and vegetables in every order.</p>
-                  </div>
-                </div>
-              </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card mb-3 border-0">
-              <div class="row">
-                <div class="col-md-2 text-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 8.35a3.07 3.07 0 0 0-3.54.53a3 3 0 0 0 0 4.24L11.29 16a1 1 0 0 0 1.42 0l2.83-2.83a3 3 0 0 0 0-4.24A3.07 3.07 0 0 0 12 8.35Zm2.12 3.36L12 13.83l-2.12-2.12a1 1 0 0 1 0-1.42a1 1 0 0 1 1.41 0a1 1 0 0 0 1.42 0a1 1 0 0 1 1.41 0a1 1 0 0 1 0 1.42ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z"/></svg>
-                </div>
-                <div class="col-md-10">
-                  <div class="card-body p-0">
-                    <h5>guaranteed savings</h5>
-                <p class="card-text">Enjoy the best prices on fresh produce with daily discounts and offers.</p>
-
-                  </div>
-                </div>
-              </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card mb-3 border-0">
-              <div class="row">
-                <div class="col-md-2 text-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M18 7h-.35A3.45 3.45 0 0 0 18 5.5a3.49 3.49 0 0 0-6-2.44A3.49 3.49 0 0 0 6 5.5A3.45 3.45 0 0 0 6.35 7H6a3 3 0 0 0-3 3v2a1 1 0 0 0 1 1h1v6a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-6h1a1 1 0 0 0 1-1v-2a3 3 0 0 0-3-3Zm-7 13H8a1 1 0 0 1-1-1v-6h4Zm0-9H5v-1a1 1 0 0 1 1-1h5Zm0-4H9.5A1.5 1.5 0 1 1 11 5.5Zm2-1.5A1.5 1.5 0 1 1 14.5 7H13ZM17 19a1 1 0 0 1-1 1h-3v-7h4Zm2-8h-6V9h5a1 1 0 0 1 1 1Z"/></svg>
-                </div>
-                <div class="col-md-10">
-                  <div class="card-body p-0">
-                    <h5>Daily offers</h5>
-                <p class="card-text">Fresh deals every day on fruits, vegetables, and healthy juices.</p>
-
-                  </div>
-                </div>
-              </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="py-5">
-      <div class="container-fluid">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="footer-menu">
-              <img src="images/logo.png" alt="logo">
-              <div class="social-links mt-5">
-                <ul class="d-flex list-unstyled gap-2">
-                  <li>
-                    <a href="#" class="btn btn-outline-light">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M15.12 5.32H17V2.14A26.11 26.11 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.62H6.61v3.56h3.07V22h3.68v-9.12h3.06l.46-3.56h-3.52V7.05c0-1.05.28-1.73 1.76-1.73Z"/></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="btn btn-outline-light">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M22.991 3.95a1 1 0 0 0-1.51-.86a7.48 7.48 0 0 1-1.874.794a5.152 5.152 0 0 0-3.374-1.242a5.232 5.232 0 0 0-5.223 5.063a11.032 11.032 0 0 1-6.814-3.924a1.012 1.012 0 0 0-.857-.365a.999.999 0 0 0-.785.5a5.276 5.276 0 0 0-.242 4.769l-.002.001a1.041 1.041 0 0 0-.496.89a3.042 3.042 0 0 0 .027.439a5.185 5.185 0 0 0 1.568 3.312a.998.998 0 0 0-.066.77a5.204 5.204 0 0 0 2.362 2.922a7.465 7.465 0 0 1-3.59.448A1 1 0 0 0 1.45 19.3a12.942 12.942 0 0 0 7.01 2.061a12.788 12.788 0 0 0 12.465-9.363a12.822 12.822 0 0 0 .535-3.646l-.001-.2a5.77 5.77 0 0 0 1.532-4.202Zm-3.306 3.212a.995.995 0 0 0-.234.702c.01.165.009.331.009.488a10.824 10.824 0 0 1-.454 3.08a10.685 10.685 0 0 1-10.546 7.93a10.938 10.938 0 0 1-2.55-.301a9.48 9.48 0 0 0 2.942-1.564a1 1 0 0 0-.602-1.786a3.208 3.208 0 0 1-2.214-.935q.224-.042.445-.105a1 1 0 0 0-.08-1.943a3.198 3.198 0 0 1-2.25-1.726a5.3 5.3 0 0 0 .545.046a1.02 1.02 0 0 0 .984-.696a1 1 0 0 0-.4-1.137a3.196 3.196 0 0 1-1.425-2.673c0-.066.002-.133.006-.198a13.014 13.014 0 0 0 8.21 3.48a1.02 1.02 0 0 0 .817-.36a1 1 0 0 0 .206-.867a3.157 3.157 0 0 1-.087-.729a3.23 3.23 0 0 1 3.226-3.226a3.184 3.184 0 0 1 2.345 1.02a.993.993 0 0 0 .921.298a9.27 9.27 0 0 0 1.212-.322a6.681 6.681 0 0 1-1.026 1.524Z"/></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="btn btn-outline-light">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M23 9.71a8.5 8.5 0 0 0-.91-4.13a2.92 2.92 0 0 0-1.72-1A78.36 78.36 0 0 0 12 4.27a78.45 78.45 0 0 0-8.34.3a2.87 2.87 0 0 0-1.46.74c-.9.83-1 2.25-1.1 3.45a48.29 48.29 0 0 0 0 6.48a9.55 9.55 0 0 0 .3 2a3.14 3.14 0 0 0 .71 1.36a2.86 2.86 0 0 0 1.49.78a45.18 45.18 0 0 0 6.5.33c3.5.05 6.57 0 10.2-.28a2.88 2.88 0 0 0 1.53-.78a2.49 2.49 0 0 0 .61-1a10.58 10.58 0 0 0 .52-3.4c.04-.56.04-3.94.04-4.54ZM9.74 14.85V8.66l5.92 3.11c-1.66.92-3.85 1.96-5.92 3.08Z"/></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="btn btn-outline-light">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.34 5.46a1.2 1.2 0 1 0 1.2 1.2a1.2 1.2 0 0 0-1.2-1.2Zm4.6 2.42a7.59 7.59 0 0 0-.46-2.43a4.94 4.94 0 0 0-1.16-1.77a4.7 4.7 0 0 0-1.77-1.15a7.3 7.3 0 0 0-2.43-.47C15.06 2 14.72 2 12 2s-3.06 0-4.12.06a7.3 7.3 0 0 0-2.43.47a4.78 4.78 0 0 0-1.77 1.15a4.7 4.7 0 0 0-1.15 1.77a7.3 7.3 0 0 0-.47 2.43C2 8.94 2 9.28 2 12s0 3.06.06 4.12a7.3 7.3 0 0 0 .47 2.43a4.7 4.7 0 0 0 1.15 1.77a4.78 4.78 0 0 0 1.77 1.15a7.3 7.3 0 0 0 2.43.47C8.94 22 9.28 22 12 22s3.06 0 4.12-.06a7.3 7.3 0 0 0 2.43-.47a4.7 4.7 0 0 0 1.77-1.15a4.85 4.85 0 0 0 1.16-1.77a7.59 7.59 0 0 0 .46-2.43c0-1.06.06-1.4.06-4.12s0-3.06-.06-4.12ZM20.14 16a5.61 5.61 0 0 1-.34 1.86a3.06 3.06 0 0 1-.75 1.15a3.19 3.19 0 0 1-1.15.75a5.61 5.61 0 0 1-1.86.34c-1 .05-1.37.06-4 .06s-3 0-4-.06a5.73 5.73 0 0 1-1.94-.3a3.27 3.27 0 0 1-1.1-.75a3 3 0 0 1-.74-1.15a5.54 5.54 0 0 1-.4-1.9c0-1-.06-1.37-.06-4s0-3 .06-4a5.54 5.54 0 0 1 .35-1.9A3 3 0 0 1 5 5a3.14 3.14 0 0 1 1.1-.8A5.73 5.73 0 0 1 8 3.86c1 0 1.37-.06 4-.06s3 0 4 .06a5.61 5.61 0 0 1 1.86.34a3.06 3.06 0 0 1 1.19.8a3.06 3.06 0 0 1 .75 1.1a5.61 5.61 0 0 1 .34 1.9c.05 1 .06 1.37.06 4s-.01 3-.06 4ZM12 6.87A5.13 5.13 0 1 0 17.14 12A5.12 5.12 0 0 0 12 6.87Zm0 8.46A3.33 3.33 0 1 1 15.33 12A3.33 3.33 0 0 1 12 15.33Z"/></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="btn btn-outline-light">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M1.04 17.52q.1-.16.32-.02a21.308 21.308 0 0 0 10.88 2.9a21.524 21.524 0 0 0 7.74-1.46q.1-.04.29-.12t.27-.12a.356.356 0 0 1 .47.12q.17.24-.11.44q-.36.26-.92.6a14.99 14.99 0 0 1-3.84 1.58A16.175 16.175 0 0 1 12 22a16.017 16.017 0 0 1-5.9-1.09a16.246 16.246 0 0 1-4.98-3.07a.273.273 0 0 1-.12-.2a.215.215 0 0 1 .04-.12Zm6.02-5.7a4.036 4.036 0 0 1 .68-2.36A4.197 4.197 0 0 1 9.6 7.98a10.063 10.063 0 0 1 2.66-.66q.54-.06 1.76-.16v-.34a3.562 3.562 0 0 0-.28-1.72a1.5 1.5 0 0 0-1.32-.6h-.16a2.189 2.189 0 0 0-1.14.42a1.64 1.64 0 0 0-.62 1a.508.508 0 0 1-.4.46L7.8 6.1q-.34-.08-.34-.36a.587.587 0 0 1 .02-.14a3.834 3.834 0 0 1 1.67-2.64A6.268 6.268 0 0 1 12.26 2h.5a5.054 5.054 0 0 1 3.56 1.18a3.81 3.81 0 0 1 .37.43a3.875 3.875 0 0 1 .27.41a2.098 2.098 0 0 1 .18.52q.08.34.12.47a2.856 2.856 0 0 1 .06.56q.02.43.02.51v4.84a2.868 2.868 0 0 0 .15.95a2.475 2.475 0 0 0 .29.62q.14.19.46.61a.599.599 0 0 1 .12.32a.346.346 0 0 1-.16.28q-1.66 1.44-1.8 1.56a.557.557 0 0 1-.58.04q-.28-.24-.49-.46t-.3-.32a4.466 4.466 0 0 1-.29-.39q-.2-.29-.28-.39a4.91 4.91 0 0 1-2.2 1.52a6.038 6.038 0 0 1-1.68.2a3.505 3.505 0 0 1-2.53-.95a3.553 3.553 0 0 1-.99-2.69Zm3.44-.4a1.895 1.895 0 0 0 .39 1.25a1.294 1.294 0 0 0 1.05.47a1.022 1.022 0 0 0 .17-.02a1.022 1.022 0 0 1 .15-.02a2.033 2.033 0 0 0 1.3-1.08a3.13 3.13 0 0 0 .33-.83a3.8 3.8 0 0 0 .12-.73q.01-.28.01-.92v-.5a7.287 7.287 0 0 0-1.76.16a2.144 2.144 0 0 0-1.76 2.22Zm8.4 6.44a.626.626 0 0 1 .12-.16a3.14 3.14 0 0 1 .96-.46a6.52 6.52 0 0 1 1.48-.22a1.195 1.195 0 0 1 .38.02q.9.08 1.08.3a.655.655 0 0 1 .08.36v.14a4.56 4.56 0 0 1-.38 1.65a3.84 3.84 0 0 1-1.06 1.53a.302.302 0 0 1-.18.08a.177.177 0 0 1-.08-.02q-.12-.06-.06-.22a7.632 7.632 0 0 0 .74-2.42a.513.513 0 0 0-.08-.32q-.2-.24-1.12-.24q-.34 0-.8.04q-.5.06-.92.12a.232.232 0 0 1-.16-.04a.065.065 0 0 1-.02-.08a.153.153 0 0 1 .02-.06Z"/></svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-sm-6">
-            <div class="footer-menu">
-              <h5 class="widget-title">Ultras</h5>
-              <ul class="menu-list list-unstyled">
-                <li class="menu-item">
-                  <a href="#" class="nav-link">About us</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Conditions </a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Our Journals</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Careers</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Affiliate Programme</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Ultras Press</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <div class="footer-menu">
-              <h5 class="widget-title">Customer Service</h5>
-              <ul class="menu-list list-unstyled">
-                <li class="menu-item">
-                  <a href="#" class="nav-link">FAQ</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Contact</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Privacy Policy</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Returns & Refunds</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Cookie Guidelines</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Delivery Information</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <div class="footer-menu">
-              <h5 class="widget-title">Customer Service</h5>
-              <ul class="menu-list list-unstyled">
-                <li class="menu-item">
-                  <a href="#" class="nav-link">FAQ</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Contact</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Privacy Policy</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Returns & Refunds</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Cookie Guidelines</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Delivery Information</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="footer-menu">
-              <h5 class="widget-title">Subscribe Us</h5>
-              <p>Subscribe to our newsletter to get updates about our grand offers.</p>
-              <form class="d-flex mt-3 gap-0" role="newsletter">
-                <input class="form-control rounded-start rounded-0 bg-light" type="email" placeholder="Email Address" aria-label="Email Address">
-                <button class="btn btn-dark rounded-end rounded-0" type="submit">Subscribe</button>
-              </form>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </footer>
-    <div id="footer-bottom">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 copyright">
-            <p>© 2023 Foodmart. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
     </div>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+</div></ul>
+                                
+                            </div>
+ </nav>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </header>
+        <!-- end header -->
+    </div>
+	<!-- end site-header -->
+	
+    <div id="banner" class="banner full-screen-mode parallax">
+        <div class="container pr">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="banner-static">
+                    <div class="banner-text">
+                        <div class="banner-cell">
+                            <h1>Dinner with us  <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Friends:Family:Officemates" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                            <h2>Accidental appearances </h2>
+                            <p>
+Enjoy a warm and welcoming dining experience with us, where every meal is crafted to bring people together. Whether you're here with friends, family, or colleagues, we serve freshly prepared dishes made with quality ingredients and a touch of love. 
+</p>
+                            <div class="book-btn">
+                                <a href="#reservation" class="table-btn hvr-underline-from-center">Book my Table</a>
+                            </div>
+                            <a href="#about">
+                                <div class="mouse"></div>
+                            </a>
+                        </div>
+                        <!-- end banner-cell -->
+                    </div>
+                    <!-- end banner-text -->
+                </div>
+                <!-- end banner-static -->
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end banner -->
+
+    <div id="about" class="about-main pad-top-100 pad-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 class="block-title"> About Us </h2>
+                        <h3>IT STARTED, QUITE SIMPLY, LIKE THIS...</h3>
+                        <p>
+Our restaurant was built with a simple idea — to serve delicious food that brings people together. From the beginning, we have focused on fresh ingredients, authentic flavors, and a welcoming atmosphere where every guest feels at home.
+</p>
+
+<p>
+Over time, we have grown into a place loved for both everyday meals and special occasions. Our chefs take pride in preparing each dish with care, blending tradition with a modern touch to create a memorable dining experience for every customer.
+</p>
+
+<p>
+Whether you're stopping by for a quick bite or a family celebration, we are committed to offering great taste, warm service, and an experience that keeps you coming back.
+</p>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <div class="about-images">
+                            <img class="about-main" src="images/about-main.jpg" alt="About Main Image">
+                            <img class="about-inset" src="images/about-inset.jpg" alt="About Inset Image">
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+
+    <div class="special-menu pad-top-100 parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 class="block-title color-white text-center"> Today's Special </h2>
+                        <h5 class="title-caption text-center">    Discover our chef’s handpicked special dishes of the day, prepared fresh with premium ingredients and bold flavors to give you a truly memorable dining experience.
+</h5>
+                    </div>
+                    <div class="special-box">
+                        <div id="owl-demo">
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            SALMON STEAK
+                                            <div class="line"></div>
+                                            <div class="dit-line">    Perfectly grilled salmon steak served with fresh herbs and a light lemon butter sauce for a rich and healthy taste.
+</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/special-menu-1.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            ITALIAN PIZZA
+                                            <div class="line"></div>
+                                            <div class="dit-line">    Classic Italian pizza topped with fresh tomatoes, mozzarella cheese, and aromatic basil baked to perfection.
+</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/special-menu-2.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            VEG. ROLL
+                                            <div class="line"></div>
+                                            <div class="dit-line">    Crispy vegetable roll packed with seasoned veggies and spices, served hot and full of flavor.
+</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/special-menu-3.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            SALMON STEAK
+                                            <div class="line"></div>
+                                            <div class="dit-line">    A chef-special dish made with fresh ingredients and authentic flavors to satisfy your cravings.
+</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/special-menu-1.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            VEG. ROLL
+                                            <div class="line"></div>
+                                            <div class="dit-line">    Crispy vegetable roll packed with seasoned veggies and spices, served hot and full of flavor.
+</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/special-menu-2.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end special-box -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end special-menu -->
+
+    <div id="menu" class="menu-main pad-top-100 pad-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 class="block-title text-center">
+						Our Menu 	
+					</h2>
+                        <p class="title-caption text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                    </div>
+                    <div class="tab-menu">
+                        <div class="slider slider-nav">
+                            <div class="tab-title-menu">
+                                <h2>STARTERS</h2>
+                                <p> <i class="flaticon-canape"></i> </p>
+                            </div>
+                            <div class="tab-title-menu">
+                                <h2>MAIN DISHES</h2>
+                                <p> <i class="flaticon-dinner"></i> </p>
+                            </div>
+                            <div class="tab-title-menu">
+                                <h2>DESERTS</h2>
+                                <p> <i class="flaticon-desert"></i> </p>
+                            </div>
+                            <div class="tab-title-menu">
+                                <h2>DRINKS</h2>
+                                <p> <i class="flaticon-coffee"></i> </p>
+                            </div>
+                        </div>
+                        <div class="slider slider-single">
+                            <div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-01.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>GARLIC BREAD</h3>
+                                            <p>
+Freshly baked garlic bread brushed with herb butter and lightly toasted for a crispy, flavorful start to your meal.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$8.5</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-02.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>MIXED SALAD</h3>
+                                            <p>
+A refreshing mix of fresh greens, seasonal vegetables, and light dressing for a healthy and balanced choice.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$25</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-03.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>BBQ CHICKEN WINGS</h3>
+                                            <p>
+Juicy chicken wings coated in smoky BBQ sauce and grilled to perfection with a rich, tangy flavor.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$10</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-04.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>MEAT FEAST PIZZA</h3>
+                                            <p>
+Loaded with assorted meats, cheese, and rich tomato sauce on a crispy baked crust for meat lovers.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$5</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-05.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>CHICKEN TIKKA MASALA</h3>
+                                            <p>
+Tender chicken pieces cooked in a creamy, spiced tomato gravy served with rich traditional flavors.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$15</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-06.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>SPICY MEATBALLS</h3>
+                                            <p>
+Soft meatballs cooked in a spicy, flavorful sauce that delivers a bold and satisfying taste.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$6.5</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-07.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>CHOCOLATE FUDGECAKE</h3>
+                                            <p>
+A rich and moist chocolate fudge cake topped with smooth chocolate layers for dessert lovers.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$4.5</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-08.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>CHICKEN TIKKA MASALA</h3>
+                                            <p>
+Tender chicken pieces cooked in a creamy, spiced tomato gravy served with rich traditional flavors.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$9.5</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-09.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>CHICKEN TIKKA MASALA</h3>
+                                            <p>
+Tender chicken pieces cooked in a creamy, spiced tomato gravy served with rich traditional flavors.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$10</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-10.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>MEAT FEAST PIZZA</h3>
+                                            <p>
+Loaded with assorted meats, cheese, and rich tomato sauce on a crispy baked crust for meat lovers.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$12.5</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-09.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>CHICKEN TIKKA MASALA</h3>
+                                            <p>
+Tender chicken pieces cooked in a creamy, spiced tomato gravy served with rich traditional flavors.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$9.5</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-08.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>CHICKEN TIKKA MASALA</h3>
+                                            <p>
+Tender chicken pieces cooked in a creamy, spiced tomato gravy served with rich traditional flavors.
+
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$5.5</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end tab-menu -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end menu -->
+
+
+    <div id="blog" class="blog-main pad-top-100 pad-bottom-100 parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h2 class="block-title text-center">
+					Our Blog 	
+				</h2>
+                    <div class="blog-box clearfix">
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="blog-block">
+                                    <div class="blog-img-box">
+                                        <img src="images/featured-image-01.jpg" alt="" />
+                                        <div class="overlay">
+                                            <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="blog-dit">
+                                        <p><span>25 NOVEMBER, 2014</span></p>
+                                        <h2>LATEST RECIPES JUST IN!</h2>
+                                        <h5>BY John Doggett</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="blog-block">
+                                    <div class="blog-img-box">
+                                        <img src="images/featured-image-02.jpg" alt="" />
+                                        <div class="overlay">
+                                            <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="blog-dit">
+                                        <p><span>2 NOVEMBER, 2014</span></p>
+                                        <h2>NEW RECRUITS HAVE ARRIVED!</h2>
+                                        <h5>BY Jeffrey Spender</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="blog-block">
+                                    <div class="blog-img-box">
+                                        <img src="images/featured-image-03.jpg" alt="" />
+                                        <div class="overlay">
+                                            <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="blog-dit">
+                                        <p><span>4 NOVEMBER, 2014</span></p>
+                                        <h2>BAKING TIPS FROM THE PROS</h2>
+                                        <h5>BY Monica Reyes</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="blog-block">
+                                    <div class="blog-img-box">
+                                        <img src="images/featured-image-04.jpg" alt="" />
+                                        <div class="overlay">
+                                            <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="blog-dit">
+                                        <p><span>12 NOVEMBER, 2014</span></p>
+                                        <h2>ALL YOUR EGGS BELONG TO US</h2>
+                                        <h5>BY John Doggett</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                    </div>
+                    <!-- end blog-box -->
+
+                    <div class="blog-btn-v">
+                        <a class="hvr-underline-from-center" href="#">View the Blog</a>
+                    </div>
+
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end blog-main -->
+
+
+    <div id="reservation" class="reservations-main pad-top-100 pad-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="form-reservations-box">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                            <h2 class="block-title text-center">
+						Reservations			
+					</h2>
+                        </div>
+                        <h4 class="form-title">BOOKING FORM</h4>
+                        <p>PLEASE FILL OUT ALL REQUIRED* FIELDS. THANKS!</p>
+
+                        <form id="contact-form" method="post" class="reservations-box" name="contactform" action="mail.php">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-box">
+                                    <input type="text" name="form_name" id="form_name" placeholder="Name" required="required" data-error="Firstname is required.">
+                                </div>
+                            </div>
+                            <!-- end col -->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-box">
+                                    <input type="email" name="email" id="email" placeholder="E-Mail ID" required="required" data-error="E-mail id is required.">
+                                </div>
+                            </div>
+                            <!-- end col -->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-box">
+                                    <input type="text" name="phone" id="phone" placeholder="contact no.">
+                                </div>
+                            </div>
+                            <!-- end col -->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-box">
+                                    <select name="no_of_persons" id="no_of_persons" class="selectpicker">
+                                        <option selected disabled>No. Of persons</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- end col -->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-box">
+                                    <input type="text" name="date-picker" id="date-picker" placeholder="Date" required="required" data-error="Date is required." />
+                                </div>
+                            </div>
+                            <!-- end col -->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-box">
+                                    <input type="text" name="time-picker" id="time-picker" placeholder="Time" required="required" data-error="Time is required." />
+                                </div>
+                            </div>
+                            <!-- end col -->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-box">
+                                    <select name="preferred_food" id="preferred_food" class="selectpicker">
+                                        <option selected disabled>preferred food</option>
+                                        <option>Indian</option>
+                                        <option>Continental</option>
+                                        <option>Mexican</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- end col -->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-box">
+                                    <select name="occasion" id="occasion" class="selectpicker">
+                                        <option selected disabled>Occasion</option>
+                                        <option>Wedding</option>
+                                        <option>Birthday</option>
+                                        <option>Anniversary</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="reserve-book-btn text-center">
+                                    <button class="hvr-underline-from-center" type="submit" value="SEND" id="submit">BOOK MY TABLE </button>
+                                </div>
+                            </div>
+                            <!-- end col -->
+                        </form>
+                        <!-- end form -->
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end reservations-box -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end reservations-main -->
+
+        <div class="footer-box pad-top-70">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-in-main">
+                        <div class="footer-logo">
+                            <div class="text-center">
+                                <img src="images/logo.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-a">
+                                <h3>About Us</h3>
+                                <p>Aenean commodo ligula eget dolor aenean massa. Cum sociis nat penatibu set magnis dis parturient montes.</p>
+                                <ul class="socials-box footer-socials pull-left">
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa  fa-facebook"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-twitter"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-google-plus"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-pinterest"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-linkedin"></i></div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- end footer-box-a -->
+                        </div>
+                        <!-- end col -->
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-b">
+                                <h3>New Menu</h3>
+                                <ul>
+                                    <li><a href="#">Italian Bomba Sandwich</a></li>
+                                    <li><a href="#">Double Dose of Pork Belly</a></li>
+                                    <li><a href="#">Spicy Thai Noodles</a></li>
+                                    <li><a href="#">Triple Truffle Trotters</a></li>
+                                </ul>
+                            </div>
+                            <!-- end footer-box-b -->
+                        </div>
+                        <!-- end col -->
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-c">
+                                <h3>Contact Us</h3>
+                                <p>
+                                    <i class="fa fa-map-signs" aria-hidden="true"></i>
+                                    <span>6 E Esplanade, St Albans VIC 3021, Australia</span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                                    <span>
+									+91 80005 89080 
+								</span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span><a href="#">support@foodfunday.com</a></span>
+                                </p>
+                            </div>
+                            <!-- end footer-box-c -->
+                        </div>
+                        <!-- end col -->
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-d">
+                                <h3>Opening Hours</h3>
+
+                                <ul>
+                                    <li>
+                                        <p>Monday - Thursday </p>
+                                        <span> 11:00 AM - 9:00 PM</span>
+                                    </li>
+                                    <li>
+                                        <p>Friday - Saturday </p>
+                                        <span>  11:00 AM - 5:00 PM</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end footer-box-d -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end footer-in-main -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+            <div id="copyright" class="copyright-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h6 class="copy-title"> Copyright &copy; 2018 Food Funday is powered by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a> </h6>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end copyright-main -->
+        </div>
+        <!-- end footer-box -->
+    </div>
+    <!-- end footer-main -->
+
+    <a href="#" class="scrollup" style="display: none;">Scroll</a>
+
+    <section id="color-panel" class="close-color-panel">
+        <a class="panel-button gray2"><i class="fa fa-cog fa-spin fa-2x"></i></a>
+        <!-- Colors -->
+        <div class="segment">
+            <h4 class="gray2 normal no-padding">Color Scheme</h4>
+            <a title="orange" class="switcher orange-bg"></a>
+            <a title="strong-blue" class="switcher strong-blue-bg"></a>
+            <a title="moderate-green" class="switcher moderate-green-bg"></a>
+            <a title="vivid-yellow" class="switcher vivid-yellow-bg"></a>
+        </div>
+    </section>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+
 </html>
