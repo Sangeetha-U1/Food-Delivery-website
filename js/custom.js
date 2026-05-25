@@ -307,3 +307,39 @@
 		 
 	
 })(jQuery);
+let cart = [];
+
+$(document).on("click", ".add-to-cart", function () {
+    let name = $(this).data("name");
+    let price = parseInt($(this).data("price"));
+
+    cart.push({ name, price });
+
+    alert(name + " added to cart");
+
+    updateCart();
+});
+
+function updateCart() {
+    let html = "";
+    let total = 0;
+
+    cart.forEach(item => {
+        html += `<p>${item.name} - ₹${item.price}</p>`;
+        total += item.price;
+    });
+
+    $("#cartModal .modal-body").html(`
+        <h4>Your Order</h4>
+        ${html}
+        <hr>
+        <h4>Total: ₹${total}</h4>
+        <input type="text" class="form-control" placeholder="Enter Address"><br>
+        <input type="text" class="form-control" placeholder="Phone Number"><br>
+        <select class="form-control">
+            <option>Cash on Delivery</option>
+            <option>UPI</option>
+            <option>Card Payment</option>
+        </select>
+    `);
+}

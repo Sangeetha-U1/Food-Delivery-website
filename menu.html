@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>Food Funday Restaurant - One page HTML Responsive</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+    
+    <div id="loader">
+        <div id="status"></div>
+    </div>
+    <div id="site-header">
+        <header id="header" class="header-block-top">
+            <div class="container">
+                <div class="row">
+                    <div class="main-menu">
+                        <!-- navbar -->
+                         
+                        <nav class="navbar navbar-default" id="mainNav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                
+                                <div class="logo">
+                                    <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                        <img src="images/logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li><a href="#about">About us</a></li>
+                                    <li><a href="menu.html">Menu</a></li>
+                                    <li><a href="#">Restaurant</a></li>
+                                      <!-- Cart Option -->
+   <li>         <!-- your menu page content -->
+<a href="#" data-toggle="modal" tabindex="-1" data-target="#cartModal">
+    🛒 Cart
+</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+</div>
+<!-- CART MODAL (ADD HERE AT BOTTOM OF PAGE) -->
+<div class="modal fade" id="cartModal"  role="dialog">
+    
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title">Checkout</h4>
+            </div>
+
+            <div class="modal-body">
+                <h4>Your Order</h4>
+                <p>Pizza x1 - ₹250</p>
+                <p>Burger x2 - ₹300</p>
+                <hr>
+
+                <h4>Total: ₹550</h4>
+
+                <input type="text" class="form-control" placeholder="Enter Address">
+                <br>
+
+                <input type="text" class="form-control" placeholder="Phone Number">
+                <br>
+
+                <select class="form-control">
+                    <option>Cash on Delivery</option>
+                    <option>UPI</option>
+                    <option>Card Payment</option>
+                </select>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">
+                    Place Order
+                </button>
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!-- MENU PAGE BANNER -->
+     <!-- MENU TITLE BANNER -->
+      <div class="page-banner">
+    <div class="banner-content">
+        <h1>Our Menu</h1>
+        <p>Fresh & Delicious Food</p>
+    </div>
+</div>
+
+<!-- ===== MENU SECTION ===== -->
+<div class="container" style="margin-top:40px;">
+
+    <!-- FILTER -->
+    <div class="text-center" style="margin-bottom:25px;">
+        <button class="filter-btn btn btn-default active" data-filter="all">All</button>
+        <button class="filter-btn btn btn-default" data-filter="starter">Starters</button>
+        <button class="filter-btn btn btn-default" data-filter="main">Main Course</button>
+    </div>
+
+    <!-- MENU ROW -->
+    <div class="row">
+
+        <!-- ITEM 1 -->
+        <div class="col-md-4 menu-card" data-category="starter">
+            <img src="https://images.unsplash.com/photo-1573140401552-3fab0b24306f?w=600">
+            <div class="menu-card-body">
+                <h3>Garlic Bread</h3>
+                <p>Crispy garlic bread</p>
+
+                <div class="menu-footer">
+                    <span class="menu-price">₹199</span>
+                      <button class="btn btn-success btn-sm add-to-cart"
+                            data-name="Garlic Bread"
+                            data-price="199">
+                            Add to Cart
+                        </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="col-md-4 menu-card" data-category="starter">
+            <img src="https://images.unsplash.com/photo-1669340781012-ae89fbac9fc3?w=600">
+            <div class="menu-card-body">
+                <h3>Veg Spring Rolls</h3>
+                <p>Crunchy rolls</p>
+
+                <div class="menu-footer">
+                    <span class="menu-price">₹249</span>
+                    <button class="btn btn-success btn-sm add-to-cart"
+                            data-name="Veg Spring Rolls"
+                            data-price="249">
+                            Add to Cart
+                        </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="col-md-4 menu-card" data-category="starter">
+            <img src="https://images.unsplash.com/photo-1600555379765-f82335a7b1b0?w=600">
+            <div class="menu-card-body">
+                <h3>Chicken Wings</h3>
+                <p>Spicy grilled wings</p>
+
+                <div class="menu-footer">
+                    <span class="menu-price">₹349</span>
+<button class="btn btn-success btn-sm add-to-cart"
+                            data-name="Chicken Wings"
+                            data-price="349">
+                            Add to Cart
+                        </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="col-md-4 menu-card" data-category="main">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600">
+            <div class="menu-card-body">
+                <h3>Paneer Butter Masala</h3>
+                <p>Creamy curry</p>
+
+                <div class="menu-footer">
+                    <span class="menu-price">₹299</span>
+<button class="btn btn-success btn-sm add-to-cart"
+                            data-name="Paneer Butter Masala"
+                            data-price="299">
+                            Add to Cart
+                        </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="col-md-4 menu-card" data-category="starter">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600">
+            <div class="menu-card-body">
+                <h3>French Fries</h3>
+                <p>Crispy fries</p>
+
+                <div class="menu-footer">
+                    <span class="menu-price">₹179</span>
+<button class="btn btn-success btn-sm add-to-cart"
+                            data-name="French Fries"
+                            data-price="179">
+                            Add to Cart
+                        </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 6 -->
+        <div class="col-md-4 menu-card" data-category="starter">
+            <img src="images/special-menu-3.jpg">
+            <div class="menu-card-body">
+                <h3>Cheese Balls</h3>
+                <p>Cheesy bites</p>
+
+                <div class="menu-footer">
+                    <span class="menu-price">₹229</span>
+<button class="btn btn-success btn-sm add-to-cart"
+                            data-name="Cheese Balls"
+                            data-price="229">
+                            Add to Cart
+                        </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+                <div class="footer-box pad-top-70">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-in-main">
+                        <div class="footer-logo">
+                            <div class="text-center">
+                                <img src="images/logo.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-a">
+                                <h3>About Us</h3>
+                                <p>Aenean commodo ligula eget dolor aenean massa. Cum sociis nat penatibu set magnis dis parturient montes.</p>
+                                <ul class="socials-box footer-socials pull-left">
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa  fa-facebook"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-twitter"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-google-plus"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-pinterest"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-linkedin"></i></div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- end footer-box-a -->
+                        </div>
+                        <!-- end col -->
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-b">
+                                <h3>New Menu</h3>
+                                <ul>
+                                    <li><a href="#">Italian Bomba Sandwich</a></li>
+                                    <li><a href="#">Double Dose of Pork Belly</a></li>
+                                    <li><a href="#">Spicy Thai Noodles</a></li>
+                                    <li><a href="#">Triple Truffle Trotters</a></li>
+                                </ul>
+                            </div>
+                            <!-- end footer-box-b -->
+                        </div>
+                        <!-- end col -->
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-c">
+                                <h3>Contact Us</h3>
+                                <p>
+                                    <i class="fa fa-map-signs" aria-hidden="true"></i>
+                                    <span>6 E Esplanade, St Albans VIC 3021, Australia</span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                                    <span>
+									+91 80005 89080 
+								</span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span><a href="#">support@foodfunday.com</a></span>
+                                </p>
+                            </div>
+                            <!-- end footer-box-c -->
+                        </div>
+                        <!-- end col -->
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-d">
+                                <h3>Opening Hours</h3>
+
+                                <ul>
+                                    <li>
+                                        <p>Monday - Thursday </p>
+                                        <span> 11:00 AM - 9:00 PM</span>
+                                    </li>
+                                    <li>
+                                        <p>Friday - Saturday </p>
+                                        <span>  11:00 AM - 5:00 PM</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end footer-box-d -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end footer-in-main -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+            <div id="copyright" class="copyright-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h6 class="copy-title"> Copyright &copy; 2018 Food Funday is powered by </h6>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end copyright-main -->
+        </div>
+        <!-- end footer-box -->
+    </div>
+    <!-- end footer-main -->
+
+    <a href="#" class="scrollup" style="display: none;">Scroll</a>
+
+    <section id="color-panel" class="close-color-panel">
+        <a class="panel-button gray2"><i class="fa fa-cog fa-spin fa-2x"></i></a>
+        <!-- Colors -->
+        <div class="segment">
+            <h4 class="gray2 normal no-padding">Color Scheme</h4>
+            <a title="orange" class="switcher orange-bg"></a>
+            <a title="strong-blue" class="switcher strong-blue-bg"></a>
+            <a title="moderate-green" class="switcher moderate-green-bg"></a>
+            <a title="vivid-yellow" class="switcher vivid-yellow-bg"></a>
+        </div>
+    </section>
+
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    $(".filter-btn").click(function(){
+
+        $(".filter-btn").removeClass("active");
+        $(this).addClass("active");
+
+        let value = $(this).data("filter");
+
+        if(value == "all"){
+            $(".menu-card").show(300);
+        }
+        else{
+            $(".menu-card").hide(200);
+            $('.menu-card[data-category="'+value+'"]').show(300);
+        }
+
+    });
+
+});
+</script>
+</body>
+</html>
