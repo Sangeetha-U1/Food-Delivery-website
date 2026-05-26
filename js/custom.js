@@ -343,3 +343,36 @@ function updateCart() {
         </select>
     `);
 }
+$("#placeOrderBtn").click(function(){
+
+    alert("✅ Order Placed Successfully!");
+
+    $("#cartModal").modal('hide');
+
+});
+$(".close").click(function(){
+    $("#cartModal").modal("hide");
+});
+$(document).ready(function(){
+
+    $("#contact-form").submit(function(e){
+
+        e.preventDefault();
+
+        let name = $("#form_name").val();
+        let email = $("#email").val();
+
+        if(name == "" || email == ""){
+            alert("Please fill all required fields");
+            return;
+        }
+
+        // SUCCESS POPUP
+        alert("✅ Booking Completed Successfully!");
+
+        // clear form
+        $("#contact-form")[0].reset();
+
+    });
+
+});

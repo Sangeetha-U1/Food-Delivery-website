@@ -66,9 +66,8 @@
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav navbar-right">
                                     <li class="active"><a href="index.html">Home</a></li>
-                                    <li><a href="#about">About us</a></li>
                                     <li><a href="menu.html">Menu</a></li>
-                                    <li><a href="#">Restaurant</a></li>
+                                    <li><a href="resturant.html">Restaurant</a></li>
                                       <!-- Cart Option -->
             <li>
                 <a href="#" data-toggle="modal" data-target="#cartModal">
@@ -127,13 +126,12 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-success">
-                    Place Order
-                </button>
-
-                <button type="button" class="btn btn-default" data-dismiss="modal">
-                    Close
-                </button>
+                <button type="button" id="placeOrderBtn" class="btn btn-success">
+    Place Order
+</button>
+                <button type="button" class="close" data-dismiss="modal">
+    &times;
+</button>
             </div>
 
         </div>
@@ -390,9 +388,7 @@ Whether you're stopping by for a quick bite or a family celebration, we are comm
                     </div>
                     <!-- end blog-box -->
 
-                    <div class="blog-btn-v">
-                        <a class="hvr-underline-from-center" href="#">View the Blog</a>
-                    </div>
+                   
 
                 </div>
                 <!-- end col -->
@@ -416,8 +412,7 @@ Whether you're stopping by for a quick bite or a family celebration, we are comm
                         </div>
                         <h4 class="form-title">BOOKING FORM</h4>
                         <p>PLEASE FILL OUT ALL REQUIRED* FIELDS. THANKS!</p>
-
-                        <form id="contact-form" method="post" class="reservations-box" name="contactform" action="mail.php">
+<form id="contact-form" class="reservations-box" name="contactform">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-box">
                                     <input type="text" name="form_name" id="form_name" placeholder="Name" required="required" data-error="Firstname is required.">
